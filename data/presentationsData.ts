@@ -12,7 +12,7 @@ interface Presentation {
       No, it isn't Micro-Services or Eventbus. It is the Big Ball of Mud! because it simply works
       This is a summarizing presentation of one of my favourite papers..`,
       href: 'https://big-ball-of-mud-presentation.vercel.app/1',
-      imgSrc: '/static/images/big-ball-of-mud-survivor.png',
+      imgSrc: '/static/images/mud.png',
     },
   ]
   
