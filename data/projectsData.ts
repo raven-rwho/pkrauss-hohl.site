@@ -14,6 +14,15 @@ const projectsData: Project[] = [
     imgSrc: '/static/images/orgchart.png',
     href: 'https://github.com/raven-rwho/orgchart',
   },
+  {
+    title: 'Location FInder',
+    description: `This app is based on React Native and Firebase and allows the storage and retrieving of locations. 
+    It consists of two screens. The first allows the storage and uploading of the location to a Firebase Realtime Database. 
+    It is just meant as a proove of concept that can be anehanced to every kind of location 
+    based "finder" app (e.g. stores, shops, restaurants, doctors, what ever)`,
+    imgSrc: '/static/images/locationfinder.png',
+    href: 'https://github.com/raven-rwho/location-finder',
+  },
 ]
 
 export default projectsData
