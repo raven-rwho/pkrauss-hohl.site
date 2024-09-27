@@ -29,7 +29,7 @@ export default function ImprintLayout({ children }: Props) {
               <li>
                 <p>Data Controller</p>
                 Unless otherwise stated in this Privacy Policy, the Data Controller in accordance
-                with Art. 4 no. 7 GDPR is Peter Krauß-Hohl, Oranienburg, info@p.kraus-hohl.site
+                with Art.4 no.7 GDPR is Peter Krauß-Hohl, Oranienburg, info@p.kraus-hohl.site
                 (hereinafter also “we” or “us”).
               </li>
               <li>
@@ -62,7 +62,7 @@ export default function ImprintLayout({ children }: Props) {
                 enquiry. We will delete data collected in this connection once it is no longer
                 required for the aforementioned purpose, unless the deletion of this data would
                 contravene statutory retention obligations. The legal basis for data processing is
-                provided by Art. 6 para. 1 sentence 1 point f GDPR.
+                provided by Art. 6 para. 1 sentence 1 point f GDPR.
               </li>
               <li>
                 <p>Cookies and similar Technologies</p>
