@@ -1,0 +1,53 @@
+---
+title: 'Cerberus - Automated validation af tracking data before it hits your lake/DWH'
+date: '2024-12-11'
+lastmod: '2024-12-16'
+tags: ['playwright', 'data validation', 'testing', 'automation']
+draft: false
+summary: 'An introduction of our test automation to validate our data foundation.'
+images: ['/static/images/cerberus.jpg']
+---
+
+<div className="-mx-2 flex flex-wrap justify-center overflow-hidden xl:-mx-2">
+  <div className="my-1 w-full overflow-hidden px-2 xl:my-1 xl:w-1/2 xl:px-2">
+    ![storytelling](/static/images/cerberus.jpg)
+  </div>
+</div>
+
+# Automated validation af tracking data before it hits your lake/DWH - Welcome **Cerberus**
+
+## Sh** In -> Sh** out!
+Anyone with experience in the expansive field of data knows the expression "garbage in -> garbage out." It essentially underscores the harsh reality that, no matter how much effort you put into manipulating, understanding, or visualizing your data through dashboards or ML models, the results will only be as good as the quality and integrity of your data allows them to be. This is why we developed a system to validate our tracking data.
+
+At Axel Springer National Media & Tech, we oversee approximately 25 different brands within the German news media markets of Axel Springer. In total, we handle the behavioral data of a high single-digit million number of users daily across various brands and products, including native mobile apps and websites. Initially, we attempted to manually identify anomalies in our tracking data or, worse, realized issues when the connected business reports deviated significantly from the "gut feeling" of our stakeholders in the editorial departments.
+
+Therefore, we implemented a system named Cerberus, which utilizes browser automation to run hundreds of different tests multiple times. These tests expect specific tracking events after execution and trigger alerts if anything unexpected occurs.
+
+## System in detail
+Cerberus, named after the three-headed watchdog guarding the entrance to hell (somehow, we liked the name), primarily consists of three components:
+1. Playwright with many many tests.
+2. A self implemented proxy that makes sure that the emitted events do not hit our production systems.
+3. A github action with a custom runner on AWS.
+4. Alerting and evaluation mechanisms
+
+### Playwright
+[Playwright](https://playwright.dev/) is an open-source framework for browser automation. Initially started by Microsoft, it has become the de-facto standard for companies requiring tests across different browsers. Playwright supports various programming languages (TypeScript, JavaScript, Python, .NET, and Java) and all major browsers, including mobile web testing. Notably, it allows creating archives for every test run containing detailed logs and even screencasts for easier debugging ([Trace Viewer](https://playwright.dev/docs/trace-viewer-intro)).
+
+#### Tests
+To comprehend the diversity of our tests, understanding our system structure is crucial. Responsible for around 25 different news media brands and their digital products, we maintain a common data layer through a tag manager to gauge the performance of websites and apps. The challenge lies in creating a unified model structure to understand KPIs across all products. This led to the implementation of a common data layer via a tag manager, resulting in a complex data structure with numerous edge cases. To tackle this, we created hundreds of tests based on a comprehensive documentation defining when specific data should be triggered.
+
+### Proxy
+When we started to conceptualize this system we had a big concern - if we run hundreds of tests that are running against our production environment - they will adulterate our data which will result in wrong values about the perfomance of our products.
+Luckily Playwright got us covered there too. It provides a [proxy API](https://playwright.dev/docs/network) that allows us to trigger all requests that we need without cluttering our results. 
+
+Concerned about running tests against our production environment potentially altering our data, we implemented a proxy using Playwright's [proxy API](https://playwright.dev/docs/network). This allows us to trigger required requests without affecting our results.
+
+
+### Github Action
+Having migrated our CI/CD pipelines to GitHub Actions a few years ago, we found it to be an easy-to-maintain and understandable solution tightly integrated with our repositories. To overcome performance issues, we implemented custom runners on AWS for each run. This setup enables us to run complex websites and tests on powerful VMs in parallel, utilizing cost-effective spot instances.
+
+### Evaluation and Alerting
+Running hundreds of tests in parallel generated substantial data in the form of test results. Addressing this challenge required two key elements: an alerting mechanism to minimize false positives and a way to aggregate test results over time. We achieved the former by sending customized emails to super users when tests fail consecutively, increasing severity if failures occur across different browsers in one run. For the latter, we sent results to our data lake environment in JSON format using Foundry from Palantir. This allows us to collect, store, and build dashboards displaying the history of test results, rankings of the most failing tests, identification of problematic browsers, and more.
+
+### Conclusion
+Our three-headed watchdog from hell, Cerberus, significantly enhanced the validity of our data. We now promptly identify issues with our tracking events, and in 90% of cases, we pinpoint where to look for a solution. This increased data trust provides a solid foundation for our stakeholders and various data-related products.
