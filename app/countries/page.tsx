@@ -9,7 +9,6 @@ import {
   getContinentStats
 } from '@/data/countriesData';
 import PageTitle from '@/components/PageTitle';
-import CountriesMapWrapper from '@/components/CountriesMapWrapper';
 
 export default function CountriesPage() {
   const visitedCountries = getVisitedCountries();
@@ -44,15 +43,6 @@ export default function CountriesPage() {
             <div className="text-sm text-gray-600 dark:text-gray-400">World Coverage</div>
           </div>
         </div>
-      </div>
-
-      {/* Interactive World Map */}
-      <div className="mb-8 rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-        <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-gray-100">World Map</h2>
-        <CountriesMapWrapper
-          visitedCountries={visitedCountries}
-          className="h-96 w-full rounded-lg overflow-hidden"
-        />
       </div>
 
       {/* Continent Statistics */}
