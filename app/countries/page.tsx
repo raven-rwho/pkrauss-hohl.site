@@ -106,37 +106,7 @@ export default function CountriesPage() {
             ))}
         </div>
       </div>
-
-      {/* Bucket List */}
-      <div className="mb-8 rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-        <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-gray-100">
-          Next Destinations
-        </h2>
-        <p className="mb-4 text-gray-600 dark:text-gray-400">
-          Some countries I'm planning to visit next...
-        </p>
-        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {[
-            { name: 'Japan', code: 'JP', continent: 'Asia' },
-            { name: 'New Zealand', code: 'NZ', continent: 'Oceania' },
-            { name: 'Norway', code: 'NO', continent: 'Europe' },
-            { name: 'Iceland', code: 'IS', continent: 'Europe' },
-            { name: 'Canada', code: 'CA', continent: 'North America' },
-            { name: 'Brazil', code: 'BR', continent: 'South America' },
-          ].map((country) => (
-            <div
-              key={country.code}
-              className="flex items-center space-x-3 rounded-lg border border-blue-200 bg-blue-50 p-3 dark:border-blue-700 dark:bg-blue-900/20"
-            >
-              <span className="text-2xl">{getFlagEmoji(country.code)}</span>
-              <div>
-                <div className="font-medium text-gray-900 dark:text-gray-100">{country.name}</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">{country.continent}</div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      
     </div>
   )
 }
