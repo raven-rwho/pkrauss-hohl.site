@@ -106,7 +106,6 @@ export default function CountriesPage() {
             ))}
         </div>
       </div>
-      
     </div>
   )
 }
