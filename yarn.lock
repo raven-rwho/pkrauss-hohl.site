@@ -3181,6 +3181,48 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/d3-color@npm:^2":
+  version: 2.0.6
+  resolution: "@types/d3-color@npm:2.0.6"
+  checksum: 0b8394204345424f8a38f7b185bcf1346080be040bceebd5ca912ffdb9072a7f89d42d82713dcbd3341eb820f1430f03353b55ed02bb3385f4fd7942fbba22a9
+  languageName: node
+  linkType: hard
+
+"@types/d3-geo@npm:^2":
+  version: 2.0.7
+  resolution: "@types/d3-geo@npm:2.0.7"
+  dependencies:
+    "@types/geojson": "*"
+  checksum: fe87bc3ca073348834134fd419543036857312ca870a705cd460039f72530ca594a1e20215f89cc71ef082ea1051cf875d2e56821b6befe25c3b6be8280039e4
+  languageName: node
+  linkType: hard
+
+"@types/d3-interpolate@npm:^2":
+  version: 2.0.5
+  resolution: "@types/d3-interpolate@npm:2.0.5"
+  dependencies:
+    "@types/d3-color": ^2
+  checksum: d680f78a8f9c34665067b2c6853ba3d92c7c1d3e036532f8f3c0a6645223c18a9b9bedb7bc1f36fa24619208b1875f4a31b80172988d2fb582697141f7313c9c
+  languageName: node
+  linkType: hard
+
+"@types/d3-selection@npm:^2":
+  version: 2.0.5
+  resolution: "@types/d3-selection@npm:2.0.5"
+  checksum: f4b66ee3a2686af1ac4c5c7fbf15ebf9fad0be97c15b2ab4289faff3ab0517b262592e41b25ccc9da82ac5f901502d585c069c62af5370f55767ff9a62254eb7
+  languageName: node
+  linkType: hard
+
+"@types/d3-zoom@npm:^2":
+  version: 2.0.7
+  resolution: "@types/d3-zoom@npm:2.0.7"
+  dependencies:
+    "@types/d3-interpolate": ^2
+    "@types/d3-selection": ^2
+  checksum: 38ac8dfbb2578c5de1f072bd11c1fd5ab8d96e12d99afa6cc1556c7845e84964f5fcabed4c141007796b2dfe2581c4cd5b4fcd9da3ba625a9fbda3c7170efc99
+  languageName: node
+  linkType: hard
+
 "@types/debug@npm:^4.0.0":
   version: 4.1.12
   resolution: "@types/debug@npm:4.1.12"
@@ -3203,6 +3245,13 @@ __metadata:
   version: 1.0.5
   resolution: "@types/estree@npm:1.0.5"
   checksum: dd8b5bed28e6213b7acd0fb665a84e693554d850b0df423ac8076cc3ad5823a6bc26b0251d080bdc545af83179ede51dd3f6fa78cad2c46ed1f29624ddf3e41a
+  languageName: node
+  linkType: hard
+
+"@types/geojson@npm:*":
+  version: 7946.0.16
+  resolution: "@types/geojson@npm:7946.0.16"
+  checksum: d66e5e023f43b3e7121448117af1930af7d06410a32a585a8bc9c6bb5d97e0d656cd93d99e31fa432976c32e98d4b780f82bf1fd1acd20ccf952eb6b8e39edf2
   languageName: node
   linkType: hard
 
@@ -3288,6 +3337,27 @@ __metadata:
   version: 15.7.12
   resolution: "@types/prop-types@npm:15.7.12"
   checksum: ac16cc3d0a84431ffa5cfdf89579ad1e2269549f32ce0c769321fdd078f84db4fbe1b461ed5a1a496caf09e637c0e367d600c541435716a55b1d9713f5035dfe
+  languageName: node
+  linkType: hard
+
+"@types/react-simple-maps@npm:^3.0.6":
+  version: 3.0.6
+  resolution: "@types/react-simple-maps@npm:3.0.6"
+  dependencies:
+    "@types/d3-geo": ^2
+    "@types/d3-zoom": ^2
+    "@types/geojson": "*"
+    "@types/react": "*"
+  checksum: 1617494cfcb24ee595be7c9babb434235ab32be08efb90702437962bff8a3fd910fd4419baeb0277b1cc1e8ab8a2be5aaff892b6b0415e204f5d850758450a8e
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:*":
+  version: 19.1.13
+  resolution: "@types/react@npm:19.1.13"
+  dependencies:
+    csstype: ^3.0.2
+  checksum: def174cf34e8450ea326d02e3b3a9378e51aaa71e6dd25e5f6750ddc5f3eda5099bf1b5c415cb911d91bec354b9ef25c99e55a1deedf483b93ed698da0e20ab4
   languageName: node
   linkType: hard
 
@@ -4388,6 +4458,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"commander@npm:2":
+  version: 2.20.3
+  resolution: "commander@npm:2.20.3"
+  checksum: ab8c07884e42c3a8dbc5dd9592c606176c7eb5c1ca5ff274bcf907039b2c41de3626f684ea75ccf4d361ba004bbaff1f577d5384c155f3871e456bdf27becf9e
+  languageName: node
+  linkType: hard
+
 "commander@npm:^4.0.0":
   version: 4.1.1
   resolution: "commander@npm:4.1.1"
@@ -4618,6 +4695,106 @@ __metadata:
   version: 3.1.3
   resolution: "csstype@npm:3.1.3"
   checksum: 8db785cc92d259102725b3c694ec0c823f5619a84741b5c7991b8ad135dfaa66093038a1cc63e03361a6cd28d122be48f2106ae72334e067dd619a51f49eddf7
+  languageName: node
+  linkType: hard
+
+"d3-array@npm:^2.5.0":
+  version: 2.12.1
+  resolution: "d3-array@npm:2.12.1"
+  dependencies:
+    internmap: ^1.0.0
+  checksum: 97853b7b523aded17078f37c67742f45d81e88dda2107ae9994c31b9e36c5fa5556c4c4cf39650436f247813602dfe31bf7ad067ff80f127a16903827f10c6eb
+  languageName: node
+  linkType: hard
+
+"d3-color@npm:1 - 2":
+  version: 2.0.0
+  resolution: "d3-color@npm:2.0.0"
+  checksum: b887354aa383937abd04fbffed3e26e5d6a788472cd3737fb10735930e427763e69fe93398663bccf88c0b53ee3e638ac6fcf0c02226b00ed9e4327c2dfbf3dc
+  languageName: node
+  linkType: hard
+
+"d3-dispatch@npm:1 - 2":
+  version: 2.0.0
+  resolution: "d3-dispatch@npm:2.0.0"
+  checksum: cf473676ae0df1915d51d056d2c6734ceec480d258611d970a01847c50e8c273c185032bf9ed491abd077696bcbeeb491dc94af53e888871f3a1a0fac7365cec
+  languageName: node
+  linkType: hard
+
+"d3-drag@npm:2":
+  version: 2.0.0
+  resolution: "d3-drag@npm:2.0.0"
+  dependencies:
+    d3-dispatch: 1 - 2
+    d3-selection: 2
+  checksum: 47f0bcdd097fd363d59da41299f276c1f6bd88bc460f53871b3d9c35982d40f59a535c6de7fa07a51120e56c99064bd9aa3551279dc09ce4204c639d54f80399
+  languageName: node
+  linkType: hard
+
+"d3-ease@npm:1 - 2":
+  version: 2.0.0
+  resolution: "d3-ease@npm:2.0.0"
+  checksum: 1a9f6dfc836f0c66fba1ed28f0a3ad170d7c4f4812d442c6b562163e1a60283cc697e72a2cc4ba64abff9e77ad56354847986a5964e0c661af9b6d132c642e29
+  languageName: node
+  linkType: hard
+
+"d3-geo@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "d3-geo@npm:2.0.2"
+  dependencies:
+    d3-array: ^2.5.0
+  checksum: 992f667c646f8e2ea810de20e62914128e119f0458bce4090934287af3b93395632ed4af16aae7ccae095ae702a23b5d7a49888674f1aa27ab1a6e410882d86c
+  languageName: node
+  linkType: hard
+
+"d3-interpolate@npm:1 - 2":
+  version: 2.0.1
+  resolution: "d3-interpolate@npm:2.0.1"
+  dependencies:
+    d3-color: 1 - 2
+  checksum: 4a2018ac34fbcc3e0e7241e117087ca1b2274b8b33673913658623efacc5db013b8d876586d167b23e3145bdb34ec8e441d301299b082e1a90985b2f18d4299c
+  languageName: node
+  linkType: hard
+
+"d3-selection@npm:2, d3-selection@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "d3-selection@npm:2.0.0"
+  checksum: c00143f55d510e405fc51e5ef626cb6b3705181ec3d595e84e5cb977508e30228d95d7e209aff6e686ff758c562c5dd17e974325ee8c8555bb6f4f382331ec7d
+  languageName: node
+  linkType: hard
+
+"d3-timer@npm:1 - 2":
+  version: 2.0.0
+  resolution: "d3-timer@npm:2.0.0"
+  checksum: 70733c3baffe473155b712896f04f27dae32d6e94169827f57aebb203e190926ba37af12c5f56cbc7126e538a4b1cd083f2451b80dc2a5644d076b6b31982bd8
+  languageName: node
+  linkType: hard
+
+"d3-transition@npm:2":
+  version: 2.0.0
+  resolution: "d3-transition@npm:2.0.0"
+  dependencies:
+    d3-color: 1 - 2
+    d3-dispatch: 1 - 2
+    d3-ease: 1 - 2
+    d3-interpolate: 1 - 2
+    d3-timer: 1 - 2
+  peerDependencies:
+    d3-selection: 2
+  checksum: 8f29d195adc75e20dcffacb44e571fd64a2f60d511e6e7438019356bbc6c3ada10ae2b1393c36242ab71eb1b131f60cf71d0d76bd4cab4fce6a5ddaf1f6f6b00
+  languageName: node
+  linkType: hard
+
+"d3-zoom@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "d3-zoom@npm:2.0.0"
+  dependencies:
+    d3-dispatch: 1 - 2
+    d3-drag: 2
+    d3-interpolate: 1 - 2
+    d3-selection: 2
+    d3-transition: 2
+  checksum: d98cc6ffa1105b0062ee312303caff9345ecd1f6df11b7da1e008c1c4731551755ac951327e8c758ffcf74e761218bc6c4f4a6b48f91551ea5d67e0dcf574a49
   languageName: node
   linkType: hard
 
@@ -6697,6 +6874,13 @@ __metadata:
     hasown: ^2.0.0
     side-channel: ^1.0.4
   checksum: cadc5eea5d7d9bc2342e93aae9f31f04c196afebb11bde97448327049f492cd7081e18623ae71388aac9cd237b692ca3a105be9c68ac39c1dec679d7409e33eb
+  languageName: node
+  linkType: hard
+
+"internmap@npm:^1.0.0":
+  version: 1.0.1
+  resolution: "internmap@npm:1.0.1"
+  checksum: 9d00f8c0cf873a24a53a5a937120dab634c41f383105e066bb318a61864e6292d24eb9516e8e7dccfb4420ec42ca474a0f28ac9a6cc82536898fa09bbbe53813
   languageName: node
   linkType: hard
 
@@ -9476,6 +9660,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-simple-maps@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "react-simple-maps@npm:3.0.0"
+  dependencies:
+    d3-geo: ^2.0.2
+    d3-selection: ^2.0.0
+    d3-zoom: ^2.0.0
+    topojson-client: ^3.1.0
+  peerDependencies:
+    prop-types: ^15.7.2
+    react: ^16.8.0 || 17.x || 18.x
+    react-dom: ^16.8.0 || 17.x || 18.x
+  checksum: d4074965522f0d04e2688b63c8879ea08b6996bee41f2ec101aa06605f2746c048dad568da1ee6a6a7b91903fcabc546caf454ada7da47a36c776b351089bdf7
+  languageName: node
+  linkType: hard
+
 "react-virtual@npm:^2.8.2":
   version: 2.10.4
   resolution: "react-virtual@npm:2.10.4"
@@ -10905,6 +11105,7 @@ __metadata:
     "@tailwindcss/typography": ^0.5.12
     "@types/mdx": ^2.0.12
     "@types/react": ^18.2.73
+    "@types/react-simple-maps": ^3.0.6
     "@typescript-eslint/eslint-plugin": ^6.1.0
     "@typescript-eslint/parser": ^6.1.0
     autoprefixer: ^10.4.13
@@ -10930,6 +11131,7 @@ __metadata:
     prettier-plugin-tailwindcss: ^0.5.11
     react: 18.3.1
     react-dom: 18.3.1
+    react-simple-maps: ^3.0.0
     reading-time: 1.5.0
     rehype-autolink-headings: ^7.1.0
     rehype-citation: ^2.0.0
@@ -11072,6 +11274,19 @@ __metadata:
   version: 3.0.0
   resolution: "toml@npm:3.0.0"
   checksum: 5d7f1d8413ad7780e9bdecce8ea4c3f5130dd53b0a4f2e90b93340979a137739879d7b9ce2ce05c938b8cc828897fe9e95085197342a1377dd8850bf5125f15f
+  languageName: node
+  linkType: hard
+
+"topojson-client@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "topojson-client@npm:3.1.0"
+  dependencies:
+    commander: 2
+  bin:
+    topo2geo: bin/topo2geo
+    topomerge: bin/topomerge
+    topoquantize: bin/topoquantize
+  checksum: 8c029a4f18324ace0b8b55dd90edbd40c9e3c6de18bafbb5da37ca20ebf20e26fbd4420891acb3c2c264e214185f7557871f5651a9eee517028663be98d836de
   languageName: node
   linkType: hard
 
