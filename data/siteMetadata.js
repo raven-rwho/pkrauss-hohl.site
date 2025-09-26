@@ -3,7 +3,8 @@ const siteMetadata = {
   title: 'Blog',
   author: 'Peter Krauß-Hohl',
   headerTitle: 'Peters',
-  description: 'Hi!. This is my blog which I use to write about everything that I find relevant and could be helpful for others. Main topics are tech management and in a general sense technology things',
+  description:
+    'Hi!. This is my blog which I use to write about everything that I find relevant and could be helpful for others. Main topics are tech management and in a general sense technology things',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://pkrauss-hohl.site',
@@ -13,7 +14,7 @@ const siteMetadata = {
   // mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'address@yoursite.com',
   github: 'https://github.com/raven-rwho',
-//  x: 'https://twitter.com/x',
+  //  x: 'https://twitter.com/x',
   // twitter: 'https://twitter.com/Twitter',
   // facebook: 'https://facebook.com',
   // youtube: 'https://youtube.com',
@@ -34,7 +35,7 @@ const siteMetadata = {
     },
     // plausibleAnalytics: {
     //   plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
-         // If you are hosting your own Plausible.
+    // If you are hosting your own Plausible.
     //   src: '', // e.g. https://plausible.my-domain.com/js/script.js
     // },
     // simpleAnalytics: {},

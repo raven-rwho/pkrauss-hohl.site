@@ -1,8 +1,8 @@
 export interface Country {
-  name: string;
-  code: string; // ISO 3166-1 alpha-2 code
-  visited: boolean;
-  continent: string;
+  name: string
+  code: string // ISO 3166-1 alpha-2 code
+  visited: boolean
+  continent: string
 }
 
 // Total: 195 UN member states
@@ -72,7 +72,12 @@ export const countriesData: Country[] = [
   { name: 'Barbados', code: 'BB', visited: false, continent: 'North America' },
   { name: 'Saint Lucia', code: 'LC', visited: false, continent: 'North America' },
   { name: 'Grenada', code: 'GD', visited: false, continent: 'North America' },
-  { name: 'Saint Vincent and the Grenadines', code: 'VC', visited: false, continent: 'North America' },
+  {
+    name: 'Saint Vincent and the Grenadines',
+    code: 'VC',
+    visited: false,
+    continent: 'North America',
+  },
   { name: 'Antigua and Barbuda', code: 'AG', visited: false, continent: 'North America' },
   { name: 'Dominica', code: 'DM', visited: false, continent: 'North America' },
   { name: 'Saint Kitts and Nevis', code: 'KN', visited: false, continent: 'North America' },
@@ -158,7 +163,7 @@ export const countriesData: Country[] = [
   { name: 'Ghana', code: 'GH', visited: false, continent: 'Africa' },
   { name: 'Madagascar', code: 'MG', visited: false, continent: 'Africa' },
   { name: 'Cameroon', code: 'CM', visited: false, continent: 'Africa' },
-  { name: 'Côte d\'Ivoire', code: 'CI', visited: false, continent: 'Africa' },
+  { name: "Côte d'Ivoire", code: 'CI', visited: false, continent: 'Africa' },
   { name: 'Niger', code: 'NE', visited: false, continent: 'Africa' },
   { name: 'Burkina Faso', code: 'BF', visited: false, continent: 'Africa' },
   { name: 'Mali', code: 'ML', visited: false, continent: 'Africa' },
@@ -210,52 +215,58 @@ export const countriesData: Country[] = [
   { name: 'Marshall Islands', code: 'MH', visited: false, continent: 'Oceania' },
   { name: 'Tuvalu', code: 'TV', visited: false, continent: 'Oceania' },
   { name: 'Nauru', code: 'NR', visited: false, continent: 'Oceania' },
-];
+]
 
 export const getVisitedCountries = (): Country[] => {
-  return countriesData.filter(country => country.visited);
-};
+  return countriesData.filter((country) => country.visited)
+}
 
 export const getVisitedCountriesByContinent = (): Record<string, Country[]> => {
-  const visited = getVisitedCountries();
-  return visited.reduce((acc, country) => {
-    if (!acc[country.continent]) {
-      acc[country.continent] = [];
-    }
-    acc[country.continent].push(country);
-    return acc;
-  }, {} as Record<string, Country[]>);
-};
+  const visited = getVisitedCountries()
+  return visited.reduce(
+    (acc, country) => {
+      if (!acc[country.continent]) {
+        acc[country.continent] = []
+      }
+      acc[country.continent].push(country)
+      return acc
+    },
+    {} as Record<string, Country[]>
+  )
+}
 
 export const getTotalCountries = (): number => {
-  return countriesData.length;
-};
+  return countriesData.length
+}
 
 export const getVisitedCountriesCount = (): number => {
-  return getVisitedCountries().length;
-};
+  return getVisitedCountries().length
+}
 
 export const getVisitedPercentage = (): number => {
-  return Math.round((getVisitedCountriesCount() / getTotalCountries()) * 100 * 100) / 100;
-};
+  return Math.round((getVisitedCountriesCount() / getTotalCountries()) * 100 * 100) / 100
+}
 
-export const getContinentStats = (): Record<string, { visited: number; total: number; percentage: number }> => {
-  const continentStats: Record<string, { visited: number; total: number; percentage: number }> = {};
+export const getContinentStats = (): Record<
+  string,
+  { visited: number; total: number; percentage: number }
+> => {
+  const continentStats: Record<string, { visited: number; total: number; percentage: number }> = {}
 
-  countriesData.forEach(country => {
+  countriesData.forEach((country) => {
     if (!continentStats[country.continent]) {
-      continentStats[country.continent] = { visited: 0, total: 0, percentage: 0 };
+      continentStats[country.continent] = { visited: 0, total: 0, percentage: 0 }
     }
-    continentStats[country.continent].total++;
+    continentStats[country.continent].total++
     if (country.visited) {
-      continentStats[country.continent].visited++;
+      continentStats[country.continent].visited++
     }
-  });
+  })
 
-  Object.keys(continentStats).forEach(continent => {
-    const stats = continentStats[continent];
-    stats.percentage = Math.round((stats.visited / stats.total) * 100 * 100) / 100;
-  });
+  Object.keys(continentStats).forEach((continent) => {
+    const stats = continentStats[continent]
+    stats.percentage = Math.round((stats.visited / stats.total) * 100 * 100) / 100
+  })
 
-  return continentStats;
-};
+  return continentStats
+}
