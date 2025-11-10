@@ -152,7 +152,7 @@ export const countriesData: Country[] = [
   { name: 'Egypt', code: 'EG', visited: false, continent: 'Africa' },
   { name: 'Democratic Republic of the Congo', code: 'CD', visited: false, continent: 'Africa' },
   { name: 'Tanzania', code: 'TZ', visited: true, continent: 'Africa' },
-  { name: 'South Africa', code: 'ZA', visited: false, continent: 'Africa' },
+  { name: 'South Africa', code: 'ZA', visited: true, continent: 'Africa' },
   { name: 'Kenya', code: 'KE', visited: false, continent: 'Africa' },
   { name: 'Uganda', code: 'UG', visited: false, continent: 'Africa' },
   { name: 'Algeria', code: 'DZ', visited: false, continent: 'Africa' },
